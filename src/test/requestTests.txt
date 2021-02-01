@@ -1,0 +1,33 @@
+###
+GET http://localhost:8080/filialen/1
+Accept: application/xml
+
+
+<> 2021-02-01T103432.200.xml
+<> 2021-02-01T103047.200.json
+<> 2021-02-01T103010.200.json
+
+###
+DELETE http://localhost:8080/filialen/1
+
+###
+POST http://localhost:8080/filialen
+Content-Type: application/json
+
+{"naam":"Nieuw filiaal", "gemeente":"Brussel", "omzet":7000}
+
+<> 2021-02-01T105222.400.json
+
+###
+POST http://localhost:8080/filialen
+Content-Type: application/json
+
+{"naam":"Nieuw filiaal", "gemeente":"", "omzet":-7000}
+
+<> 2021-02-01T110455.400.json
+
+###
+PUT http://localhost:8080/filialen/4
+Content-Type: application/json
+
+{"id":4, "naam":"Nieuwe naam", "gemeente":"Nieuwe gemeente", "omzet":4321}
